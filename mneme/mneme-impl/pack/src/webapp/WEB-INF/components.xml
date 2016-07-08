@@ -364,7 +364,6 @@
 		<property name="questionService"><ref bean="org.etudes.mneme.api.QuestionService"/></property>
 		<property name="securityService"><ref bean="org.etudes.mneme.api.SecurityService"/></property>
 		<property name="submissionService"><ref bean="org.etudes.mneme.api.SubmissionService"/></property>
-		<property name="etudesGradebookService"><ref bean="org.etudes.gradebook.api.GradebookService"/></property>
 		
 		<property name="eventTrackingService"><ref bean="org.sakaiproject.event.api.EventTrackingService"/></property>
 		<property name="sessionManager"><ref bean="org.sakaiproject.tool.api.SessionManager"/></property>
@@ -478,8 +477,7 @@
 	<bean id="org.etudes.mneme.impl.OrderPlugin"
 		class="org.etudes.mneme.impl.OrderPlugin"
 		init-method="init"
-		destroy-method="destroy"
-		singleton="true">
+		destroy-method="destroy">
 
  		<property name="bundle"><value>mnemeOrder</value></property>
 
@@ -514,8 +512,7 @@
 	 <bean id="org.etudes.mneme.impl.FillInlinePlugin"
 		class="org.etudes.mneme.impl.FillInlinePlugin"
 		init-method="init"
-		destroy-method="destroy"
-		singleton="true">
+		destroy-method="destroy">
 
 		<property name="bundle"><value>mnemeFillInline</value></property>
 
@@ -774,8 +771,7 @@
     <bean id="FormatOrderPercent"
 			class="org.etudes.mneme.impl.FormatOrderPercentDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -786,8 +782,7 @@
 	<bean id="FormatOrderCount"
 			class="org.etudes.mneme.impl.FormatOrderCountDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -798,8 +793,7 @@
 	<bean id="FormatOrderChoice"
 			class="org.etudes.mneme.impl.FormatOrderChoiceDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -906,8 +900,7 @@
  <bean id="AccessFillInlinePositions"
 			class="org.etudes.mneme.impl.AccessFillInlinePositionsDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -918,8 +911,7 @@
 	<bean id="AccessFillInlinePositionValues"
 			class="org.etudes.mneme.impl.AccessFillInlinePositionValuesDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -930,8 +922,7 @@
 	<bean id="FormatFillInlinePositionPercents"
 			class="org.etudes.mneme.impl.FormatFillInlinePositionPercentsDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -942,8 +933,7 @@
 	<bean id="FormatFillInlinePositionCount"
 			class="org.etudes.mneme.impl.FormatFillInlinePositionCountDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -954,8 +944,7 @@
 	<bean id="FormatFillInlinePositionCorrect"
 			class="org.etudes.mneme.impl.FormatFillInlinePositionCorrectDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
@@ -966,8 +955,7 @@
 	<bean id="FormatFillInlinePositionChoice"
 			class="org.etudes.mneme.impl.FormatFillInlinePositionChoiceDelegate"
 			init-method="init"
-			destroy-method="destroy"
-			singleton="true">
+			destroy-method="destroy">
 
  		<property name="ui"><ref bean="org.etudes.ambrosia.api.UiService"/></property>
 
