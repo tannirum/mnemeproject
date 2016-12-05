@@ -24,21 +24,16 @@
 
 package org.etudes.ambrosia.impl;
 
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import org.etudes.ambrosia.api.Context;
-import org.etudes.ambrosia.api.Decision;
-import org.etudes.ambrosia.api.Destination;
-import org.etudes.ambrosia.api.Message;
-import org.etudes.ambrosia.api.Navigation;
-import org.etudes.ambrosia.api.PropertyReference;
+import org.etudes.ambrosia.api.*;
 import org.sakaiproject.util.StringUtil;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * UiNavigation presents a navigation control (button or text link) to the user. The result of the press is a navigation to some tool destination.
@@ -1214,7 +1209,7 @@ public class UiNavigation extends UiComponent implements Navigation
 					if (selectedIcon != null)
 					{
 						response.print("<img style=\"vertical-align:text-bottom; border-style: none;\" src=\"" + context.getUrl(selectedIcon) + "\" "
-								+ "title=\"" + description + "\" " + "alt=\"" + description + "\" />");
+								+ "class=\"ambrosiaIcon\" title=\"" + description + "\" " + "alt=\"" + description + "\" />");
 					}
 
 					if (!disabled) response.print("</a>");
@@ -1226,7 +1221,7 @@ public class UiNavigation extends UiComponent implements Navigation
 					{
 						if (!disabled) response.print("<a href=\"#\" onclick=\"act_" + id + "();return false;\">");
 						response.print("<img style=\"vertical-align:text-bottom; padding-right:0.3em; border-style: none;\" src=\""
-								+ context.getUrl(selectedIcon) + "\" " + "title=\"" + description + "\" " + "alt=\"" + description + "\" />");
+								+ context.getUrl(selectedIcon) + "\" " + "class=\"ambrosiaIcon\" title=\"" + description + "\" " + "alt=\"" + description + "\" />");
 						if (!disabled) response.print("</a>");
 					}
 
@@ -1240,7 +1235,7 @@ public class UiNavigation extends UiComponent implements Navigation
 					{
 						if (!disabled) response.print("<a href=\"#\" onclick=\"act_" + id + "();return false;\">");
 						response.print("<img style=\"vertical-align:text-bottom; padding-left:0.3em; border-style: none;\" src=\""
-								+ context.getUrl(selectedIcon) + "\" " + "title=\"" + description + "\" " + "alt=\"" + description + "\" />");
+								+ context.getUrl(selectedIcon) + "\" " + "class=\"ambrosiaIcon\" title=\"" + description + "\" " + "alt=\"" + description + "\" />");
 						if (!disabled) response.print("</a>");
 					}
 				}
