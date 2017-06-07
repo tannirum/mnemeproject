@@ -6,16 +6,28 @@
 	<parent>
 		<artifactId>master</artifactId>
 		<groupId>org.sakaiproject</groupId>
-		<version>11-SNAPSHOT</version>
-		<relativePath>../master/pom.xml</relativePath>
+		<version>12-SNAPSHOT</version>
 	</parent>
 
 	<name>etudes-mneme-tool-base</name>
 	<groupId>org.etudes</groupId>
 	<artifactId>etudes-mneme-tool-base</artifactId>
-	<version>11-SNAPSHOT</version>
+	<version>12-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
+	<repositories>
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<modules>
 		<module>etudes-util</module>
