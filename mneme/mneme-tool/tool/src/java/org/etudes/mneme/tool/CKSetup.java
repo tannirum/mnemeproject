@@ -68,7 +68,11 @@ public class CKSetup
 						AuthzGroupService authzGroupService = ComponentManager.get(AuthzGroupService.class);
  						Collection<?> mnemeGrpAllow = authzGroupService.getAuthzGroupsIsAllowed(userId,
 								org.etudes.mneme.api.MnemeService.MANAGE_PERMISSION, null);
-						if (mnemeGrpAllow.contains("/site/" + ref1.getContainer()))
+						Collection<?> mnemeGrpAllowGrade = org.sakaiproject.authz.cover.AuthzGroupService.getAuthzGroupsIsAllowed(userId,
+								org.etudes.mneme.api.MnemeService.GRADE_PERMISSION, null);
+						Collection<?> mnemeGrpAllowSubmit = org.sakaiproject.authz.cover.AuthzGroupService.getAuthzGroupsIsAllowed(userId,
+								org.etudes.mneme.api.MnemeService.SUBMIT_PERMISSION, null);
+						if (mnemeGrpAllow.contains("/site/" + ref1.getContainer()) || mnemeGrpAllowGrade.contains("/site/" + ref1.getContainer()) || mnemeGrpAllowSubmit.contains("/site/" + ref1.getContainer()))
 						{
 							return SecurityAdvice.ALLOWED;
 						}
