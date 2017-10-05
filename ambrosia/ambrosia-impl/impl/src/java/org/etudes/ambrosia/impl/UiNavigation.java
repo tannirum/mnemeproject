@@ -24,16 +24,21 @@
 
 package org.etudes.ambrosia.impl;
 
-import org.etudes.ambrosia.api.*;
-import org.sakaiproject.util.StringUtil;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
+import org.etudes.ambrosia.api.Context;
+import org.etudes.ambrosia.api.Decision;
+import org.etudes.ambrosia.api.Destination;
+import org.etudes.ambrosia.api.Message;
+import org.etudes.ambrosia.api.Navigation;
+import org.etudes.ambrosia.api.PropertyReference;
+import org.sakaiproject.util.StringUtil;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 /**
  * UiNavigation presents a navigation control (button or text link) to the user. The result of the press is a navigation to some tool destination.
