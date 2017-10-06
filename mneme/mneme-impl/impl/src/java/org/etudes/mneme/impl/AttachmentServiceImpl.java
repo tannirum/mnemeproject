@@ -4000,7 +4000,7 @@ public class AttachmentServiceImpl implements AttachmentService, EntityProducer
 					if (a instanceof TrueFalseAnswerImpl)
 					{
 						TrueFalseAnswerImpl tf = (TrueFalseAnswerImpl) a;
-						if (!isSurvey && tf.getCompletelyCorrect().booleanValue()) row.createCell((short) j).setCellValue("*"+tf.getAnswer()+"*");
+						if (!isSurvey && tf.getCompletelyCorrect() != null && tf.getCompletelyCorrect().booleanValue()) row.createCell((short) j).setCellValue("*"+tf.getAnswer()+"*");
 						else row.createCell((short) j).setCellValue(tf.getAnswer());
 					}
 					if (a instanceof MultipleChoiceAnswerImpl)
