@@ -27,7 +27,7 @@
 	<parent>
 		<artifactId>etudes-mneme-tool-base</artifactId>
 		<groupId>org.etudes</groupId>
-		<version>12-SNAPSHOT</version>
+		<version>20-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 

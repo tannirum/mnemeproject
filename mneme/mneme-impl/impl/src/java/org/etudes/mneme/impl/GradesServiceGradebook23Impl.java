@@ -24,6 +24,7 @@
 
 package org.etudes.mneme.impl;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -180,8 +181,10 @@ public class GradesServiceGradebook23Impl implements GradesService
 				String url = null;
 
 				// make an entry for the assessment
-				gradebookService.addExternalAssessment(assessment.getContext(), assessment.getTitle(), url, assessment.getTitle(),
-						toDoubleScore(assessment.getPoints()), assessment.getDates().getDueDate(), APPLICATION_NAME);
+				/*gradebookService.addExternalAssessment(assessment.getContext(), assessment.getTitle(), url, assessment.getTitle(),
+						toDoubleScore(assessment.getPoints()), assessment.getDates().getDueDate(), APPLICATION_NAME);*/
+				gradebookService.addExternalAssessment(assessment.getContext(), assessment.getTitle(), url, assessment.getTitle(), toDoubleScore(assessment.getPoints()),
+						assessment.getDates().getDueDate(), APPLICATION_NAME, "", Boolean.FALSE);
 				return Boolean.TRUE;
 			}
 		}
